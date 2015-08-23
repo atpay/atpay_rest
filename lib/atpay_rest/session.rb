@@ -3,7 +3,7 @@ require 'json'
 
 # URL_PREFIX = "https://dashboard.atpay.com"
 
-URL_PREFIX = "http://localhost:3000"
+URL_PREFIX = "https://dashboard.atpay.com"
 
 
 module AtpayRest
