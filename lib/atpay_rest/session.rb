@@ -6,7 +6,7 @@ module AtpayRest
     attr_accessor :organization
     attr_accessor :conn
 
-    def initialize(organization_id, url = "https://dashboard.atpay.com" )
+    def initialize(organization_id, url="https://dashboard.atpay.com" )
       @organization = organization_id
       conn = Faraday::Connection.new url
       conn.authorization :Token, :token => organization_id
