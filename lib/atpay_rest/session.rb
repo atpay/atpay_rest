@@ -1,19 +1,14 @@
 require 'faraday'
 require 'json'
 
-# URL_PREFIX = "https://dashboard.atpay.com"
-
-URL_PREFIX = "https://dashboard.atpay.com"
-
-
 module AtpayRest
   class Session
     attr_accessor :organization
     attr_accessor :conn
 
-    def initialize(organization_id)
+    def initialize(organization_id, url = "https://dashboard.atpay.com" )
       @organization = organization_id
-      conn = Faraday::Connection.new URL_PREFIX
+      conn = Faraday::Connection.new url
       conn.authorization :Token, :token => organization_id
       @conn = conn
     end
