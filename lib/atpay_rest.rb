@@ -6,5 +6,6 @@ module AtpayRest
     require_relative "atpay_rest/version"
     require_relative "atpay_rest/payment_method"
     require_relative "atpay_rest/offer"
+    require_relative "atpay_rest/atpay_link"
   end
 end
