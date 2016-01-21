@@ -7,5 +7,9 @@ module AtpayRest
       response = session.conn.get "api/v4/rest/organizations/#{search_string}", args
       JSON.parse response.body
     end
+
+    def self.create_organization(session, args)
+      _response = session.conn.post("api/v4/rest/organizations", args)
+    end
   end
 end
