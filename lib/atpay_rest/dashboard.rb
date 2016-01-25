@@ -10,6 +10,7 @@ module AtpayRest
 
     def self.create_organization(session, args)
       _response = session.conn.post("api/v4/rest/organizations", args)
+      _response.body
     end
   end
 end
