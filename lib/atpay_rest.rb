@@ -8,6 +8,7 @@ module AtpayRest
     require_relative "atpay_rest/offer"
     require_relative "atpay_rest/atpay_link"
     require_relative "atpay_rest/dashboard"
+    require_relative "atpay_rest/campaign"
 
   end
 end
