@@ -13,5 +13,10 @@ module AtpayRest
       _response = session.conn.post("api/v4/rest/organizations", args)
       _response.body
     end
+
+    def self.create_plan_on_organization(session, organization_sid, args)
+      _response = session.conn.post("/api/v4/rest/organizations/#{organization_sid}/plan", args)
+      _response.body
+    end    
   end
 end
