@@ -18,5 +18,10 @@ module AtpayRest
       _response = session.conn.post("/api/v4/rest/organizations/#{organization_sid}/plan", args)
       _response.body
     end    
+
+    def self.create_managed_account(session, organization_sid)
+      _response = session.conn.post("/api/v4/rest/organizations/#{organization_sid}/managed_account", args)
+      _response.body
+    end    
   end
 end
