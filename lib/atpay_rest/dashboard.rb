@@ -20,7 +20,7 @@ module AtpayRest
     end    
 
     def self.create_managed_account(session, organization_sid)
-      _response = session.conn.post("/api/v4/rest/organizations/#{organization_sid}/managed_account", args)
+      _response = session.conn.post("/api/v4/rest/organizations/#{organization_sid}/managed_account")
       _response.body
     end    
   end
