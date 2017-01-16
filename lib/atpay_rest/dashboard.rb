@@ -22,6 +22,11 @@ module AtpayRest
     def self.create_managed_account(session, organization_sid)
       _response = session.conn.post("/api/v4/rest/organizations/#{organization_sid}/managed_account")
       _response.body
-    end    
+    end  
+    
+    def self.create_sms_number(session, organization_sid, args)
+      _response = session.conn.post("/api/v4/rest/organizations/#{organization_sid}/sms_numbers")
+      _response.body
+    end
   end
 end
