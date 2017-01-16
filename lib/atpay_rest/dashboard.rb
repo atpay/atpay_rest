@@ -25,7 +25,7 @@ module AtpayRest
     end  
     
     def self.create_sms_number(session, organization_sid, args)
-      _response = session.conn.post("/api/v4/rest/organizations/#{organization_sid}/sms_numbers")
+      _response = session.conn.post("/api/v4/rest/organizations/#{organization_sid}/sms_numbers", args)
       _response.body
     end
   end
